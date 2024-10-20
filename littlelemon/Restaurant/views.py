@@ -9,6 +9,10 @@ from .serializers import BookingSerializer, MenuSerializer, UserSerializer
 from django.contrib.auth.models import User 
 
 
+# Create your views here.
+def index(request):
+    return render(request, 'index.html', {})
+
 class UserViewSet(ModelViewSet):
    queryset = User.objects.all()
    serializer_class = UserSerializer
